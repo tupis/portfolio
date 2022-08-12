@@ -39,15 +39,16 @@
             .cards{
                 grid-template-columns: 1fr;
                 width: 100%;
-                margin: 0 20px;
+                place-items: center;
+                place-content: center;
                 .card{
-                    width: 100%;
+                    width: 95%;
                     height: fit-content;
                     .rectangle-glowup{
                         width: 100%;
                         height: 100%;
                         overflow: hidden;
-                        border-radius: 20px;
+                        border-radius: 5px;
                         img{
                             z-index: 1;
                             position: relative;
