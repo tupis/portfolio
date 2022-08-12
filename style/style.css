@@ -6,6 +6,15 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+  background: #F4F4F4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e80909;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -72,7 +81,7 @@ body {
   transition-delay: 0.2s;
 }
 .wrapper-nav .nav-menu span:nth-child(2) {
-  background-color: rgb(232, 9, 9);
+  background-color: #e80909;
   transform: rotate(-90deg);
   transition-delay: 0.1s;
 }
@@ -117,11 +126,11 @@ body {
 .wrapper-nav .nav-menu.active-menu ul li a:hover::before {
   transition: 1s;
   width: 100%;
-  color: rgb(232, 9, 9);
-  border-right: 8px solid rgb(232, 9, 9);
+  color: #e80909;
+  border-right: 8px solid #e80909;
 }
 .wrapper-nav .nav-menu.active-menu ul li a:hover {
-  -webkit-text-stroke: 1px rgb(232, 9, 9);
+  -webkit-text-stroke: 1px #e80909;
 }
 .wrapper-nav .nav-menu.active-menu span:nth-child(1) {
   z-index: 1;
@@ -163,12 +172,12 @@ body {
 }
 .wrapper-nav .toggle-menu:hover {
   transition: 1.5s;
-  outline: 2px solid rgb(232, 9, 9);
+  outline: 2px solid #e80909;
   color: 2px solid;
 }
 .wrapper-nav .toggle-menu:hover::before, .wrapper-nav .toggle-menu:hover::after {
   transition: 1.5s;
-  color: rgb(232, 9, 9);
+  color: #e80909;
 }
 
 .main {
@@ -185,7 +194,7 @@ body {
   margin-left: -50px;
   font-size: 0.6em;
   display: block;
-  color: rgb(232, 9, 9);
+  color: #e80909;
   font-weight: 400;
 }
 .main .info-section::before {
@@ -204,7 +213,7 @@ body {
   margin-left: -50px;
   font-size: 1em;
   display: block;
-  color: rgb(232, 9, 9);
+  color: #e80909;
   font-weight: 400;
 }
 .main .info-section[tag=p]::before {
@@ -237,21 +246,21 @@ body {
   color: black;
 }
 .main .apresentation .text-area span {
-  -webkit-text-stroke: 1px rgb(232, 9, 9);
-  filter: drop-shadow(5px 5px 5px rgb(232, 9, 9));
+  -webkit-text-stroke: 1px #e80909;
+  filter: drop-shadow(5px 5px 5px #e80909);
   color: transparent;
 }
 .main .apresentation .text-area span::selection {
   -webkit-text-stroke: unset;
   background-color: white;
-  color: rgb(232, 9, 9);
+  color: #e80909;
 }
 .main .apresentation .image-area {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 2;
-  margin: 0 20px 10px 0px;
+  margin: 0 50px 10px 0px;
   width: 100%;
   height: 100%;
 }
@@ -286,7 +295,7 @@ body {
   justify-content: center;
   align-items: center;
   color: black;
-  outline: 2px solid rgb(232, 9, 9);
+  outline: 2px solid #e80909;
 }
 .main .portifolio .cards .card .rectangle-glowup {
   display: flex;
@@ -303,7 +312,7 @@ body {
   transition: 0.4s;
   width: 450px;
   height: 300px;
-  outline: 2px solid rgb(232, 9, 9);
+  outline: 2px solid #e80909;
   transition: 0.5s ease-in-out;
 }
 .main .portifolio .cards .card .rectangle-glowup .technologys {
