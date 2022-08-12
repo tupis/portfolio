@@ -289,19 +289,19 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
   width: 450px;
-  height: 300px;
+  height: 253px;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: white;
   outline: 2px solid #e80909;
 }
 .main .portifolio .cards .card .rectangle-glowup {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: rgb(45, 44, 44);
   width: 20%;
   height: 20%;
   transition: 0.5s ease-in-out;
@@ -311,7 +311,6 @@ body {
   border-radius: 20px;
   transition: 0.4s;
   width: 450px;
-  height: 300px;
   outline: 2px solid #e80909;
   transition: 0.5s ease-in-out;
 }
@@ -332,7 +331,7 @@ body {
 }
 .main .portifolio .cards .card .rectangle-glowup a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .main .portifolio .cards .card .rectangle-glowup a .code-live, .main .portifolio .cards .card .rectangle-glowup a .github {
   position: absolute;
@@ -350,6 +349,7 @@ body {
 .main .portifolio .cards .card .rectangle-glowup a .code-live svg, .main .portifolio .cards .card .rectangle-glowup a .github svg {
   height: 35px;
   width: 35px;
+  fill: white;
 }
 .main .portifolio .cards .card .rectangle-glowup a .github {
   width: 136px;
@@ -357,6 +357,7 @@ body {
 .main .portifolio .cards .card .rectangle-glowup a .github svg {
   height: 30px;
   width: 30px;
+  fill: white;
 }
 .main .portifolio .cards .card:hover .rectangle-glowup {
   width: 100%;
@@ -364,8 +365,7 @@ body {
   border-radius: 20px;
 }
 .main .portifolio .cards .card:hover .rectangle-glowup img {
-  width: 225px;
-  height: 152px;
+  width: 224px;
   transition: 0.5 ease-in-out;
   transform: translate(91px, -53px);
 }
