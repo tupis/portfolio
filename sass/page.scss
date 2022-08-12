@@ -315,7 +315,7 @@ body {
             
                 width: 450px;
                 height: 253px;
-                border-radius: 20px;
+                border-radius: 5px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -334,7 +334,7 @@ body {
             
                     img{
                         position: absolute;
-                        border-radius: 20px;
+                        border-radius: 5px;
                         transition: 0.4s;
                         width: 450px;
                         outline: 2px solid $name-spotlight;
@@ -397,12 +397,14 @@ body {
                     .rectangle-glowup{
                         width: 100%;
                         height: 100%;
-                        border-radius: 20px;
+                        border-radius: 5px;
             
                         img{
                             width: 224px;
                             transition: 0.5 ease-in-out;
                             transform: translate(91px, -53px);
+                            border-radius: 10px;
+                            
                         }
                     }
             
@@ -442,6 +444,18 @@ body {
     }
 
     .about{
-        height: 500px;
+        .wrapper-info-about{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 500px;
+                border-radius: 50%;
+                outline: 1px solid $name-spotlight;
+            }
+            p{
+                margin-right: 50px;
+            }
+        }
     }
 }
