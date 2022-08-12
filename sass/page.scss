@@ -314,20 +314,20 @@ body {
                 font-size: 1em;
             
                 width: 450px;
-                height: 300px;
+                height: 253px;
                 border-radius: 20px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
             
-                color: black;
+                color: $white;
                 outline: 2px solid $name-spotlight;
             
                 .rectangle-glowup{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background: white;
+                    background: rgb(45, 44, 44);
                     width: 20%;
                     height: 20%;
                     transition: 0.5s ease-in-out;
@@ -337,7 +337,6 @@ body {
                         border-radius: 20px;
                         transition: 0.4s;
                         width: 450px;
-                        height: 300px;
                         outline: 2px solid $name-spotlight;
                         transition: 0.5s ease-in-out;
                     }
@@ -360,7 +359,7 @@ body {
             
                     a{
                         text-decoration: none;
-                        color: black;
+                        color: $white;
                         .code-live, .github{
                             position: absolute;
                             display: flex;
@@ -378,6 +377,7 @@ body {
                             svg{
                                 height: 35px;
                                 width: 35px;
+                                fill: white;
                             }
                         
                         }
@@ -387,6 +387,7 @@ body {
                             svg{
                                 height: 30px;
                                 width: 30px;
+                                fill: white;
                             }
                         }
                     }
@@ -399,8 +400,7 @@ body {
                         border-radius: 20px;
             
                         img{
-                            width: 225px;
-                            height: 152px;
+                            width: 224px;
                             transition: 0.5 ease-in-out;
                             transform: translate(91px, -53px);
                         }
