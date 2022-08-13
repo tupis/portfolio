@@ -3,6 +3,12 @@
         margin-top: 100px;
         .apresentation{
             flex-direction: column-reverse;
+            .text-area{
+                justify-content: flex-start;
+                margin-left: 20%;
+                white-space: inherit;
+                font-size: 2.5em;
+            }
             .image-area{
                 max-height: 500px;
                 img{
@@ -15,6 +21,12 @@
             .cards{
                 grid-template-columns: repeat(2, 1fr);
             }
+        }
+    }
+    .about{
+        .text-area-portifolio{
+            display: flex;
+            flex-direction: column;
         }
     }
 }
