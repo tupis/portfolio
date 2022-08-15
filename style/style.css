@@ -3,7 +3,6 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
@@ -33,7 +32,7 @@ body {
   z-index: 2;
   width: 100%;
   margin: 0 auto;
-  background: #111;
+  background: rgba(17, 17, 17, 0.968627451);
 }
 .nav .logo {
   width: 50px;
@@ -272,24 +271,24 @@ body {
   border-radius: 50%;
 }
 
-.portifolio {
+.portfolio {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.portifolio .text-area-portifolio {
+.portfolio .text-area-portfolio {
   align-self: flex-start;
 }
-.portifolio .text-area-portifolio h1 {
+.portfolio .text-area-portfolio h1 {
   font-size: 3em;
   margin-bottom: 35px;
 }
-.portifolio .cards {
+.portfolio .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
-.portifolio .cards .card {
+.portfolio .cards .card {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
   width: 450px;
@@ -298,9 +297,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   color: white;
 }
-.portifolio .cards .card .rectangle-glowup {
+.portfolio .cards .card .rectangle-glowup {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -309,33 +309,35 @@ body {
   height: 20%;
   transition: 0.5s ease-in-out;
 }
-.portifolio .cards .card .rectangle-glowup img {
+.portfolio .cards .card .rectangle-glowup img {
   position: absolute;
   border-radius: 5px;
   transition: 0.4s;
   width: 450px;
   transition: 0.5s ease-in-out;
 }
-.portifolio .cards .card .rectangle-glowup .technologys {
+.portfolio .cards .card .rectangle-glowup .technologys {
   position: absolute;
 }
-.portifolio .cards .card .rectangle-glowup .technologys h3 {
+.portfolio .cards .card .rectangle-glowup .technologys h3 {
   opacity: 0;
   transition: 0.5s;
 }
-.portifolio .cards .card .rectangle-glowup .technologys ul {
+.portfolio .cards .card .rectangle-glowup .technologys ul {
   list-style: none;
 }
-.portifolio .cards .card .rectangle-glowup .technologys ul li {
+.portfolio .cards .card .rectangle-glowup .technologys ul li {
+  width: 200px;
   opacity: 0;
   position: absolute;
   transition: 0.4s ease-in-out;
+  max-width: 175px;
 }
-.portifolio .cards .card .rectangle-glowup a {
+.portfolio .cards .card .rectangle-glowup a {
   text-decoration: none;
   color: white;
 }
-.portifolio .cards .card .rectangle-glowup a .code-live, .portifolio .cards .card .rectangle-glowup a .github {
+.portfolio .cards .card .rectangle-glowup a .code-live, .portfolio .cards .card .rectangle-glowup a .github {
   position: absolute;
   display: flex;
   align-items: center;
@@ -343,51 +345,51 @@ body {
   width: 224px;
   transition: 0.4s;
 }
-.portifolio .cards .card .rectangle-glowup a .code-live p, .portifolio .cards .card .rectangle-glowup a .github p {
+.portfolio .cards .card .rectangle-glowup a .code-live p, .portfolio .cards .card .rectangle-glowup a .github p {
   font-size: 1.7em;
   font-weight: 500;
   margin-right: 10px;
 }
-.portifolio .cards .card .rectangle-glowup a .code-live > i, .portifolio .cards .card .rectangle-glowup a .github > i {
+.portfolio .cards .card .rectangle-glowup a .code-live > i, .portfolio .cards .card .rectangle-glowup a .github > i {
   font-size: 1.7em;
   fill: white;
 }
-.portifolio .cards .card .rectangle-glowup a .github {
+.portfolio .cards .card .rectangle-glowup a .github {
   width: 136px;
 }
-.portifolio .cards .card .rectangle-glowup a .github svg {
+.portfolio .cards .card .rectangle-glowup a .github svg {
   height: 30px;
   width: 30px;
   fill: white;
 }
-.portifolio .cards .card:hover .rectangle-glowup {
+.portfolio .cards .card:hover .rectangle-glowup {
   width: 100%;
   height: 100%;
   border-radius: 5px;
 }
-.portifolio .cards .card:hover .rectangle-glowup img {
+.portfolio .cards .card:hover .rectangle-glowup img {
   width: 224px;
   transition: 0.5 ease-in-out;
-  transform: translate(91px, -53px);
-  border-radius: 10px;
+  transform: translate(100px, -53px);
+  border-radius: 5px;
 }
-.portifolio .cards .card:hover .technologys h3 {
+.portfolio .cards .card:hover .technologys h3 {
   opacity: 1;
-  transform: translate(-122px, var(--pos-y));
+  transform: translate(var(--pos-x), var(--pos-y));
   transition: 0.6s;
 }
-.portifolio .cards .card:hover .technologys ul li {
+.portfolio .cards .card:hover .technologys ul li {
   opacity: 1;
-  transform: translate(-120px, var(--pos-y));
+  transform: translate(var(--pos-x), var(--pos-y));
   transition: 0.4s ease-in-out;
   transition-delay: calc(var(--duration) * 0.05s);
 }
-.portifolio .cards .card:hover a .code-live, .portifolio .cards .card:hover a .github {
+.portfolio .cards .card:hover a .code-live, .portfolio .cards .card:hover a .github {
   opacity: 1;
-  transform: translate(62px, var(--pos-y));
+  transform: translate(var(--pos-x), var(--pos-y));
   transition-delay: calc(var(--duration) * 0.2s);
 }
-.portifolio .cards .card:hover a .code-live:hover, .portifolio .cards .card:hover a .github:hover {
+.portfolio .cards .card:hover a .code-live:hover, .portfolio .cards .card:hover a .github:hover {
   transition: 0.1s;
   color: rgb(112, 112, 112);
   fill: rgb(112, 112, 112);
@@ -455,9 +457,10 @@ body {
 }
 .contact .form {
   max-width: 760px;
+  width: 100%;
   background-color: #a87301;
   border: 10px solid #F0A500;
-  padding: 77px 99px 87px;
+  padding: 100px;
 }
 .contact .form-field {
   display: flex;
@@ -469,9 +472,13 @@ body {
 }
 .contact textarea {
   resize: none;
-  width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.contact textarea.form-control {
+  height: 20px;
+  overflow-y: auto;
 }
 .contact h3 {
   text-transform: uppercase;
@@ -497,10 +504,10 @@ body {
   height: 2px;
   display: block;
   position: absolute;
-  width: 100%;
   transition: all 0.15s ease;
 }
 .contact .form-control {
+  width: 100%;
   border: none;
   border-bottom: 2px solid #F0A500;
   display: block;
@@ -516,6 +523,8 @@ body {
   transform: translateY(-22px) scale(0.8);
 }
 .contact .submit {
+  width: 50%;
+  margin: auto;
   position: relative;
   cursor: pointer;
   border: 2px solid #fff;
@@ -558,7 +567,7 @@ body {
   .main .image-area {
     flex-shrink: 2;
   }
-  .main .portifolio .cards {
+  .main .portfolio .cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -593,6 +602,14 @@ body {
     justify-content: center;
     align-items: center;
   }
+  .about .wrapper-info-about .social {
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .about .wrapper-info-about .social .wrapper-media {
+    flex-direction: row;
+  }
 }
 @media (max-width: 930px) {
   .main .apresentation .image-area {
@@ -606,44 +623,44 @@ body {
     flex-shrink: 1;
     margin: 0;
   }
-  .main .portifolio .cards {
+  .main .portfolio .cards {
     grid-template-columns: 1fr;
     width: 100%;
     place-items: center;
     place-content: center;
   }
-  .main .portifolio .cards .card {
+  .main .portfolio .cards .card {
     width: 95%;
     height: fit-content;
   }
-  .main .portifolio .cards .card .rectangle-glowup {
+  .main .portfolio .cards .card .rectangle-glowup {
     width: 100%;
     height: 100%;
     overflow: hidden;
     border-radius: 5px;
   }
-  .main .portifolio .cards .card .rectangle-glowup img {
+  .main .portfolio .cards .card .rectangle-glowup img {
     z-index: 1;
     position: relative;
     width: 100%;
     height: auto;
   }
-  .main .portifolio .cards .card .rectangle-glowup .technologys {
+  .main .portfolio .cards .card .rectangle-glowup .technologys {
     display: flex;
     flex-direction: column;
   }
-  .main .portifolio .cards .card .rectangle-glowup .technologys h3 {
+  .main .portfolio .cards .card .rectangle-glowup .technologys h3 {
     display: none;
   }
-  .main .portifolio .cards .card .rectangle-glowup .technologys ul {
+  .main .portfolio .cards .card .rectangle-glowup .technologys ul {
     display: none;
   }
-  .main .portifolio .cards .card .rectangle-glowup .technologys a .code-live, .main .portifolio .cards .card .rectangle-glowup .technologys a .github {
+  .main .portfolio .cards .card .rectangle-glowup .technologys a .code-live, .main .portfolio .cards .card .rectangle-glowup .technologys a .github {
     z-index: 0;
     position: relative;
     transform: translate(0, 0);
   }
-  .main .portifolio .cards .card:hover .rectangle-glowup img {
+  .main .portfolio .cards .card:hover .rectangle-glowup img {
     position: relative;
     z-index: 0;
     width: 100%;
@@ -651,15 +668,20 @@ body {
     filter: brightness(5%) blur(2px);
     transform: translate(0, 0);
   }
-  .main .portifolio .cards .card:hover .rectangle-glowup .technologys a {
+  .main .portfolio .cards .card:hover .rectangle-glowup .technologys a {
     color: white;
     fill: white;
   }
-  .main .portifolio .cards .card:hover .rectangle-glowup .technologys a .code-live, .main .portifolio .cards .card:hover .rectangle-glowup .technologys a .github {
+  .main .portfolio .cards .card:hover .rectangle-glowup .technologys a .code-live, .main .portfolio .cards .card:hover .rectangle-glowup .technologys a .github {
     margin: 20px 0;
     z-index: 1;
     position: relative;
     transform: translate(0, 0);
+  }
+}
+@media (max-width: 500px) {
+  .contact .submit {
+    width: 100%;
   }
 }
 
