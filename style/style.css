@@ -453,7 +453,7 @@ body {
 .contact {
   display: flex;
   justify-content: center;
-  margin: 10% 0;
+  margin: 10% 10px;
 }
 .contact .form {
   max-width: 760px;
@@ -596,14 +596,20 @@ body {
     display: flex;
     flex-direction: column;
   }
-  .about .wrapper-info-about div {
+  .about .wrapper-info-about .image-about {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+  .about .wrapper-info-about .image-about.info-section {
+    margin-left: 0px;
+  }
+  .about .wrapper-info-about .image-about.info-section::after, .about .wrapper-info-about .image-about.info-section::before {
+    margin-left: -120%;
+  }
   .about .wrapper-info-about .social {
-    margin: 0;
+    margin: auto;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -612,54 +618,56 @@ body {
   }
 }
 @media (max-width: 930px) {
-  .main .apresentation .image-area {
+  .apresentation .image-area {
     margin: 0;
   }
-  .main .apresentation .image-area img {
+  .apresentation .image-area img {
     width: 100%;
   }
-  .main .apresentation .text-area {
+  .apresentation .text-area {
     flex-shrink: 1;
-    margin: 0;
+    margin: 0 10px;
+    font-size: calc(2.5vw + 1em);
   }
-  .main .portfolio .cards {
-    grid-template-columns: 1fr;
+  .portfolio .cards {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     place-items: center;
     place-content: center;
   }
-  .main .portfolio .cards .card {
+  .portfolio .cards .card {
     width: 95%;
     height: fit-content;
   }
-  .main .portfolio .cards .card .rectangle-glowup {
+  .portfolio .cards .card .rectangle-glowup {
     width: 100%;
     height: 100%;
     overflow: hidden;
     border-radius: 5px;
   }
-  .main .portfolio .cards .card .rectangle-glowup img {
+  .portfolio .cards .card .rectangle-glowup img {
     z-index: 1;
     position: relative;
     width: 100%;
     height: auto;
   }
-  .main .portfolio .cards .card .rectangle-glowup .technologys {
+  .portfolio .cards .card .rectangle-glowup .technologys {
     display: flex;
     flex-direction: column;
   }
-  .main .portfolio .cards .card .rectangle-glowup .technologys h3 {
+  .portfolio .cards .card .rectangle-glowup .technologys h3 {
     display: none;
   }
-  .main .portfolio .cards .card .rectangle-glowup .technologys ul {
+  .portfolio .cards .card .rectangle-glowup .technologys ul {
     display: none;
   }
-  .main .portfolio .cards .card .rectangle-glowup .technologys a .code-live, .main .portfolio .cards .card .rectangle-glowup .technologys a .github {
+  .portfolio .cards .card .rectangle-glowup .technologys a .code-live, .portfolio .cards .card .rectangle-glowup .technologys a .github {
     z-index: 0;
     position: relative;
     transform: translate(0, 0);
   }
-  .main .portfolio .cards .card:hover .rectangle-glowup img {
+  .portfolio .cards .card:hover .rectangle-glowup img {
     position: relative;
     z-index: 0;
     width: 100%;
@@ -667,20 +675,74 @@ body {
     filter: brightness(5%) blur(2px);
     transform: translate(0, 0);
   }
-  .main .portfolio .cards .card:hover .rectangle-glowup .technologys a {
+  .portfolio .cards .card:hover .rectangle-glowup .technologys a {
     color: white;
     fill: white;
   }
-  .main .portfolio .cards .card:hover .rectangle-glowup .technologys a .code-live, .main .portfolio .cards .card:hover .rectangle-glowup .technologys a .github {
+  .portfolio .cards .card:hover .rectangle-glowup .technologys a .code-live, .portfolio .cards .card:hover .rectangle-glowup .technologys a .github {
     margin: 20px 0;
     z-index: 1;
     position: relative;
     transform: translate(0, 0);
   }
 }
+@media (max-width: 750px) {
+  .about .wrapper-info-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about .wrapper-info-about .image-about.info-section {
+    width: 80%;
+  }
+  .about .wrapper-info-about .image-about.info-section::after, .about .wrapper-info-about .image-about.info-section::before {
+    content: "";
+  }
+  .about .wrapper-info-about .image-about.info-section img {
+    margin: auto;
+    width: 100%;
+  }
+}
 @media (max-width: 500px) {
   .contact .submit {
     width: 100%;
+  }
+  .social > div i {
+    margin: 0 2px;
+  }
+  .main .info-section {
+    margin: 0;
+  }
+  .main .info-section::after, .main .info-section::before {
+    content: "";
+  }
+  .main .portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .portfolio .text-area-portfolio {
+    width: 100%;
+    text-align: center;
+  }
+  .main .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .about .wrapper-info-about {
+    width: 95%;
+  }
+  .main .about .wrapper-info-about .wrapper-text-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .about .wrapper-info-about .wrapper-text-about p {
+    margin: auto;
+    width: fit-content;
   }
 }
 
