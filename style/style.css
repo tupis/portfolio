@@ -619,7 +619,6 @@ body {
     width: 100%;
   }
   .main .apresentation .text-area {
-    text-align: center;
     flex-shrink: 1;
     margin: 0;
   }
