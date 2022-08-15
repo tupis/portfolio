@@ -41,14 +41,20 @@
         .wrapper-info-about{
             display: flex;
             flex-direction: column;
-            div {
+            .image-about {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
             }
+            .image-about.info-section{
+                margin-left: 0px;
+                &::after, &::before{
+                    margin-left: -120%;
+                }
+            }
             .social{
-                margin: 0;
+                margin: auto;
                 flex-direction: row;
                 justify-content: space-between;
                 .wrapper-media{
@@ -59,78 +65,78 @@
     }
 }
 @media (max-width: 930px){
-    .main{
-        .apresentation{
-            .image-area{
-                margin: 0;
-                img{
-                    width: 100%;
-                }
-            }
-            .text-area{
-                flex-shrink: 1;
-                margin: 0;
+    .apresentation{
+        .image-area{
+            margin: 0;
+            img{
+                width: 100%;
             }
         }
+        .text-area{
+            flex-shrink: 1;
+            margin: 0 10px;
+            font-size: calc(2.5vw + 1em);
+        }
+    }
 
-        .portfolio{
-            .cards{
-                grid-template-columns: 1fr;
-                width: 100%;
-                place-items: center;
-                place-content: center;
-                .card{
-                    width: 95%;
-                    height: fit-content;
-                    .rectangle-glowup{
+    .portfolio{
+        .cards{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            place-items: center;
+            place-content: center;
+            .card{
+                width: 95%;
+                height: fit-content;
+                .rectangle-glowup{
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    border-radius: 5px;
+                    img{
+                        z-index: 1;
+                        position: relative;
                         width: 100%;
-                        height: 100%;
-                        overflow: hidden;
-                        border-radius: 5px;
-                        img{
-                            z-index: 1;
-                            position: relative;
-                            width: 100%;
-                            height: auto;
+                        height: auto;
+                    }
+                    .technologys{
+                        display: flex;
+                        flex-direction: column;
+                        h3{
+                            display: none;
                         }
-                        .technologys{
-                            display: flex;
-                            flex-direction: column;
-                            h3{
-                                display: none;
-                            }
-                            ul{
-                                display: none;
-                            }
-                            a{
-                                .code-live, .github{
-                                    z-index: 0;
-                                    position: relative;
-                                    transform: translate(0,0);
-                                }
+                        ul{
+                            display: none;
+                        }
+                        a{
+                            .code-live, .github{
+                                z-index: 0;
+                                position: relative;
+                                transform: translate(0,0);
                             }
                         }
                     }
-                    &:hover{
-                        .rectangle-glowup{
-                            img{
-                                position: relative;
-                                z-index: 0;
-                                width: 100%;
-                                height: auto;
-                                filter: brightness(5%) blur(2px);
-                                transform: translate(0,0);
-                            }
-                            .technologys{
-                                a{
-                                    color: white;
-                                    fill: white;
-                                    .code-live, .github{
-                                        margin: 20px 0;
-                                        z-index: 1;
-                                        position: relative;
-                                        transform: translate(0,0);
-                                    }
+                }
+                &:hover{
+                    .rectangle-glowup{
+                        img{
+                            position: relative;
+                            z-index: 0;
+                            width: 100%;
+                            height: auto;
+                            filter: brightness(5%) blur(2px);
+                            transform: translate(0,0);
+                        }
+                        .technologys{
+                            a{
+                                color: white;
+                                fill: white;
+                                .code-live, .github{
+                                    margin: 20px 0;
+                                    z-index: 1;
+                                    position: relative;
+                                    transform: translate(0,0);
                                 }
                             }
                         }
@@ -139,12 +145,75 @@
             }
         }
     }
+    
 }
-
+@media (max-width: 750px){
+    .about{
+        .wrapper-info-about{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .image-about.info-section{
+                width: 80%;
+                &::after, &::before{
+                    content: '';
+                }
+                img{
+                    margin: auto;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
 @media (max-width: 500px){
     .contact{
         .submit{
             width: 100%;
+        }
+    }
+    .social {
+        > div{
+            i{
+                margin: 0 2px;
+            }
+        }
+    }
+    .main {
+        .info-section{
+            margin: 0;
+            &::after, &::before{
+                content: '';
+            }
+        }
+        
+        .portfolio{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .text-area-portfolio{
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .about{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+           .wrapper-info-about{
+            width: 95%;
+                .wrapper-text-about {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    p{
+                        margin: auto;
+                        width: fit-content;
+                    }
+                }
+           }
         }
     }
 }
