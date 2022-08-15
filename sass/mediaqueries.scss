@@ -1,21 +1,11 @@
 @media (max-width: 1430px){
     .main{
-        margin-top: 100px;
-        .apresentation{
-            flex-direction: column-reverse;
-            .text-area{
-                justify-content: flex-start;
-                margin-left: 20%;
-                white-space: inherit;
-                font-size: 2.5em;
-            }
-            .image-area{
-                max-height: 500px;
-                img{
-                    max-width: 350px;
-                }
-            }
-            
+         .text-area{
+            flex-shrink: 1;
+        }
+    
+        .image-area{
+            flex-shrink: 2;
         }
         .portifolio{
             .cards{
@@ -23,14 +13,43 @@
             }
         }
     }
+    
+}
+@media (max-width: 1300px) {
+    .apresentation{
+        flex-direction: column-reverse;
+        > .text-area{
+            margin: 0;
+            justify-content: flex-start;
+            font-size: 2.5em;
+            flex-shrink: 0;
+            font-size: calc(1vw + 2em);
+            height: fit-content;
+            width: fit-content;
+        }
+    
+        .image-area{
+            flex-shrink: 0;
+            margin: 0;
+            max-height: 500px;
+            img{
+                max-width: 350px;
+            }
+        }
+    }
     .about{
-        .text-area-portifolio{
+        .wrapper-info-about{
             display: flex;
             flex-direction: column;
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
 }
-
 @media (max-width: 930px){
     .main{
         .apresentation{
