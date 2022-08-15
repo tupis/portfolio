@@ -7,7 +7,7 @@
         .image-area{
             flex-shrink: 2;
         }
-        .portifolio{
+        .portfolio{
             .cards{
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -47,6 +47,14 @@
                 justify-content: center;
                 align-items: center;
             }
+            .social{
+                margin: 0;
+                flex-direction: row;
+                justify-content: space-between;
+                .wrapper-media{
+                    flex-direction: row;
+                }
+            }
         }
     }
 }
@@ -66,7 +74,7 @@
             }
         }
 
-        .portifolio{
+        .portfolio{
             .cards{
                 grid-template-columns: 1fr;
                 width: 100%;
@@ -130,6 +138,14 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 500px){
+    .contact{
+        .submit{
+            width: 100%;
         }
     }
 }
