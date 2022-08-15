@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    // box-sizing: border-box;
 }
 
 @mixin text-area-section($fontSize, $fontSizeAfterBefore){
@@ -286,11 +286,11 @@ body {
         }
     }
 }
-.portifolio{
+.portfolio{
     display: flex;
     flex-direction: column;
     align-items: center;
-    .text-area-portifolio{
+    .text-area-portfolio{
         align-self: flex-start;
         h1{
             font-size: 3em;
@@ -311,6 +311,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         
             color: $white;
         
@@ -340,9 +341,11 @@ body {
                     ul{
                         list-style: none;
                         li{
+                            width: 200px;
                             opacity: 0;
                             position: absolute;
                             transition: 0.4s ease-in-out;
+                            max-width: 175px;
                         }
                     }
                 }
@@ -391,8 +394,8 @@ body {
                     img{
                         width: 224px;
                         transition: 0.5 ease-in-out;
-                        transform: translate(91px, -53px);
-                        border-radius: 10px;
+                        transform: translate(100px, -53px);
+                        border-radius: 5px;
                         
                     }
                 }
@@ -400,13 +403,13 @@ body {
                 .technologys{
                     h3{
                         opacity: 1;
-                        transform: translate(-122px, var(--pos-y));
+                        transform: translate(var(--pos-x), var(--pos-y));
                         transition: 0.6s;
                     }
                     ul{
                         li{
                             opacity: 1;
-                            transform: translate(-120px, var(--pos-y));
+                            transform: translate(var(--pos-x), var(--pos-y));
                             transition: 0.4s ease-in-out;
                             transition-delay: calc(var(--duration) * 0.05s);
                         }
@@ -416,7 +419,7 @@ body {
                 a{
                     .code-live, .github{
                         opacity: 1;
-                        transform: translate(62px, var(--pos-y));
+                        transform: translate(var(--pos-x), var(--pos-y));
                         transition-delay: calc(var(--duration) * 0.2s);
         
                         &:hover{
@@ -493,9 +496,10 @@ body {
     margin: 10% 0;
     .form{
         max-width: 760px;
+        width: 100%;
         background-color: $form-bg;
         border: 10px solid $form-border;
-        padding: 77px 99px 87px;
+        padding: 100px;
         
     }
     .form-field{
@@ -508,9 +512,13 @@ body {
     }
     textarea{
         resize: none;
-        width: 100%;
         padding-top: 10px;
         padding-bottom: 10px;
+        font-family: $font-Roboto;
+    }
+    textarea.form-control{
+        height: 20px;
+        overflow-y: auto;
     }
     h3{
         text-transform: uppercase;
@@ -535,11 +543,11 @@ body {
             height: 2px;
             display: block;
             position: absolute;
-            width: 100%;
             transition: all .15s ease;
         }
     }
     .form-control{
+        width: 100%;
         border: none;
         border-bottom: 2px solid $form-text-border;
         display: block;
@@ -555,6 +563,8 @@ body {
         }
     }
     .submit{
+        width: 50%;
+        margin: auto;
         position: relative;
         cursor: pointer;
         border: 2px solid #fff;
