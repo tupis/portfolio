@@ -184,13 +184,13 @@ body {
     top: 25px;
     right: 10px;
     font-size: 1.2em;
-    color: white;
+    color: $white-dark;
     margin-right: 20px;
     padding: 10px;
     
     background-color: transparent;
     border: none;
-    outline: 2px solid white;
+    outline: 2px solid $white-dark;
     border-radius: 15px;
     cursor: pointer;
     &::before{
@@ -478,7 +478,7 @@ body {
     text-decoration: none;
     background-color: $theme-spotlight;
     border: none;
-    color: white;
+    color: $white-dark;
     padding: 12px 30px;
     cursor: pointer;
     font-size: 20px;
@@ -518,12 +518,14 @@ body {
     textarea.form-control{
         height: 20px;
         overflow-y: auto;
+        color: $white-dark;
     }
     h3{
         text-transform: uppercase;
         font-size: 1.5em;
         text-align: center;
         margin-bottom: 50px;
+        color: $white-dark;
     }
     .form-group{
         position: relative;
@@ -531,7 +533,7 @@ body {
         margin-bottom: 48px;
         span{
             font-size: 15px;
-            color: $form-text;
+            color: $white-dark;
             position: absolute;
             top: 11px;
             transition: all .2s ease;
@@ -543,6 +545,7 @@ body {
             display: block;
             position: absolute;
             transition: all .15s ease;
+            color: $white-dark;
         }
     }
     .form-control{
@@ -553,9 +556,9 @@ body {
         height: 43px;
         font-size: 1em;
         background: none;
-        color: white;
+        color: $white-dark;
         &:focus, &:valid {
-            border-bottom: 2px solid #fff;
+            border-bottom: 2px solid $white-dark;
             & + span {
                 transform: translateY(-22px) scale(.8);
             }
@@ -566,11 +569,11 @@ body {
         margin: auto;
         position: relative;
         cursor: pointer;
-        border: 2px solid #fff;
+        border: 2px solid $white-dark;
         background: none;
         padding: 10px 30px;
         border-radius: 5px;
-        color: #fff;
+        color: $white-dark;
         text-transform: uppercase;
         transition: 0.5s;
         &::before{
@@ -594,8 +597,63 @@ body {
         }
         &:hover::before{
             content: 'Submit';
-            color: white;
+            color: $white-dark;
             width: 100%;
+        }
+    }
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $theme-spotlight;
+
+    background-image: linear-gradient(to bottom, #0d0d0d, $black 30%);
+    background-image: -webkit-linear-gradient(to bottom, #0d0d0d, $black 30%);
+    background-image: -webkit-gradient(to bottom, #0d0d0d, $black 30%);
+    background-image: -moz-linear-gradient(to bottom, #0d0d0d, $black 30%);
+    background-image: -o-linear-gradient(to bottom, #0d0d0d, $black 30%);
+
+    padding: 0.5% 10%;
+    a{
+        position: relative;
+        color: white;
+        text-decoration: none;
+    }
+    .made{
+        &::after{
+            position: absolute;
+            content: ' ';
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            border-bottom: 3px solid $theme-spotlight;
+            transition: 1s;
+            margin-top: 5px;
+        }
+        span{
+            transition: 1s;
+            font-size: 1.1em;
+        }
+        &:hover{
+            span{
+                color: $theme-spotlight
+            }
+            &::after{
+                width: 100%;
+            }
+        }
+    }
+    i{
+        font-size: 1.5em;
+        color: white;
+        margin: 10px;
+        transition: 0.5s;
+        &:hover{
+            color: $theme-spotlight;
         }
     }
 }
