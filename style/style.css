@@ -153,12 +153,12 @@ body {
   top: 25px;
   right: 10px;
   font-size: 1.2em;
-  color: white;
+  color: #e8e8e8;
   margin-right: 20px;
   padding: 10px;
   background-color: transparent;
   border: none;
-  outline: 2px solid white;
+  outline: 2px solid #e8e8e8;
   border-radius: 15px;
   cursor: pointer;
 }
@@ -440,7 +440,7 @@ body {
   text-decoration: none;
   background-color: #F0A500;
   border: none;
-  color: white;
+  color: #e8e8e8;
   padding: 12px 30px;
   cursor: pointer;
   font-size: 20px;
@@ -479,12 +479,14 @@ body {
 .contact textarea.form-control {
   height: 20px;
   overflow-y: auto;
+  color: #e8e8e8;
 }
 .contact h3 {
   text-transform: uppercase;
   font-size: 1.5em;
   text-align: center;
   margin-bottom: 50px;
+  color: #e8e8e8;
 }
 .contact .form-group {
   position: relative;
@@ -493,7 +495,7 @@ body {
 }
 .contact .form-group span {
   font-size: 15px;
-  color: #F0A500;
+  color: #e8e8e8;
   position: absolute;
   top: 11px;
   transition: all 0.2s ease;
@@ -505,6 +507,7 @@ body {
   display: block;
   position: absolute;
   transition: all 0.15s ease;
+  color: #e8e8e8;
 }
 .contact .form-control {
   width: 100%;
@@ -514,10 +517,10 @@ body {
   height: 43px;
   font-size: 1em;
   background: none;
-  color: white;
+  color: #e8e8e8;
 }
 .contact .form-control:focus, .contact .form-control:valid {
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #e8e8e8;
 }
 .contact .form-control:focus + span, .contact .form-control:valid + span {
   transform: translateY(-22px) scale(0.8);
@@ -527,11 +530,11 @@ body {
   margin: auto;
   position: relative;
   cursor: pointer;
-  border: 2px solid #fff;
+  border: 2px solid #e8e8e8;
   background: none;
   padding: 10px 30px;
   border-radius: 5px;
-  color: #fff;
+  color: #e8e8e8;
   text-transform: uppercase;
   transition: 0.5s;
 }
@@ -556,10 +559,58 @@ body {
 }
 .contact .submit:hover::before {
   content: "Submit";
-  color: white;
+  color: #e8e8e8;
   width: 100%;
 }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F0A500;
+  background-image: linear-gradient(to bottom, #0d0d0d, #111 30%);
+  background-image: -webkit-linear-gradient(to bottom, #0d0d0d, #111 30%);
+  background-image: -webkit-gradient(to bottom, #0d0d0d, #111 30%);
+  background-image: -moz-linear-gradient(to bottom, #0d0d0d, #111 30%);
+  background-image: -o-linear-gradient(to bottom, #0d0d0d, #111 30%);
+  padding: 0.5% 10%;
+}
+footer a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+footer .made::after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-bottom: 3px solid #F0A500;
+  transition: 1s;
+  margin-top: 5px;
+}
+footer .made span {
+  transition: 1s;
+  font-size: 1.1em;
+}
+footer .made:hover span {
+  color: #F0A500;
+}
+footer .made:hover::after {
+  width: 100%;
+}
+footer i {
+  font-size: 1.5em;
+  color: white;
+  margin: 10px;
+  transition: 0.5s;
+}
+footer i:hover {
+  color: #F0A500;
+}
 @media (max-width: 1430px) {
   .main .text-area {
     flex-shrink: 1;
